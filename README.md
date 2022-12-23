@@ -1,11 +1,17 @@
 # Raport du projet controle 
-![Capture d’écran (458)](https://user-images.githubusercontent.com/101406507/206936164-c1c89d38-987a-4dc1-abff-2ea622933409.png)
-![Capture d’écran (435)](https://user-images.githubusercontent.com/101406507/206936174-b15b9544-c760-46df-a80c-c3ab96c9fe57.png) 
-![Capture d’écran (444)](https://user-images.githubusercontent.com/101406507/206936183-ae05282a-2dfe-4229-9352-9eb43d999ff4.png)
+
+# ---- Client ----
+
 ![Capture d’écran (445)](https://user-images.githubusercontent.com/101406507/206936184-429d2875-7547-4815-b6ce-1ce52a1552a9.png)
-![Capture d’écran (446)](https://user-images.githubusercontent.com/101406507/206936186-b314283c-ca27-48b1-9e13-33f66077df16.png)
-![Capture d’écran (447)](https://user-images.githubusercontent.com/101406507/206936187-959a6484-991c-4266-b776-9c2d78330a7e.png)
+## client id=1
 ![Capture d’écran (449)](https://user-images.githubusercontent.com/101406507/206936188-4b4f47e7-e254-4838-9e28-431c318832c7.png)
+![Capture d’écran (446)](https://user-images.githubusercontent.com/101406507/206936186-b314283c-ca27-48b1-9e13-33f66077df16.png) 
+# ---- Produit ----
+
+![Capture d’écran (435)](https://user-images.githubusercontent.com/101406507/206936174-b15b9544-c760-46df-a80c-c3ab96c9fe57.png) 
+# ---- Facture ----
+
+# ---- Eureka ----
 ![Capture d’écran (450)](https://user-images.githubusercontent.com/101406507/206936189-1afc759f-3188-496a-bc57-81ae79a1b6e1.png)
 ![Capture d’écran (456)](https://user-images.githubusercontent.com/101406507/206936193-217bdd8b-818b-4111-83f8-672a86c41deb.png)
 ![Capture d’écran (473)](https://user-images.githubusercontent.com/101406507/206936530-2178f10c-e36a-4bdd-b0ae-4e969aca22e0.png)
