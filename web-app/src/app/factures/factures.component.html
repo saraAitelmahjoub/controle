@@ -1,0 +1,31 @@
+<div class="container"  style="text-align: center">
+  <h1 style="margin-top:20px;color: #693737;margin-bottom: 50px;">Liste des factures:</h1>
+  <table class="table" *ngIf="facture">
+    <thead style="background-color: #CEB3B3">
+    <tr>
+      <th>ID</th>
+      <th>DateFacture</th>
+      <th>ClientID</th>
+      <th>produitID</th>
+    </tr>
+    </thead>
+    <tbody style="background-color: #FBF8F8">
+    <tr *ngFor="let f of facture._embedded.factures">
+      <td >
+        {{f.facture}}
+      </td>
+      <td>
+        {{f.dateFacture|date:'dd/MM/yyyy'}}
+      </td>
+      <td>
+        {{f.clientId}}
+      </td>
+
+      <td>
+        <button class="btn " style="background-color: #693737;color:antiquewhite"  (click)="getFactureDetail(f)">Detail Facture</button>
+      </td>
+    </tr>
+    </tbody>
+    <tfoot style="background-color: #693737"><tr><th></th><th></th><th></th><th></th></tr></tfoot>
+  </table>
+</div>

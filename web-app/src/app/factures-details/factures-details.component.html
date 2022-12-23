@@ -1,0 +1,49 @@
+<div class="container" *ngIf="facturedatail" >
+    <h1 style="text-align: center;margin-top:20px;margin-bottom: 50px;color: #470606" > facture n°:{{facturedatail.facture}}</h1>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header" style="background-color: #C3ACAC;text-align: center;color:#580E0E"> <b>Info Facture</b></div>
+        <div class="card-body" style="background-color: #FBF8F8">
+          <ul style="list-style: none;margin-left: 50px">
+            <li><b style="color: #521313">Numero de facture :</b> {{facturedatail.facture}}</li>
+            <li><b style="color: #521313">Date de facture : </b>{{facturedatail.dateFacture | date }}</li>
+             <li><b style="color: #521313">ClientID:</b> {{facturedatail.client.id}}</li>
+            <li><b style="color: #521313">Nom client:</b> {{facturedatail.client.name}}</li>
+            <li><b style="color: #521313">Client email: </b>{{facturedatail.client.email}}</li>
+          </ul>
+          <div class="card-footer" style="background-color: #C3ACAC"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-header" style="background-color: #C3ACAC;text-align: center;color:#580E0E"><b>Info produit</b></div>
+        <div class="card-body">
+          <table class="table table-sm">
+            <thead>
+            <tr class="text-center" style="background-color: #CEB3B3">
+              <th >Produit Id</th> <th>Prix (Dh)</th> <th>Quantité</th> <th>TOTAL</th>
+            </tr>
+            </thead>
+            <tbody style="background-color: #FBF8F8">
+              <tr class="text-center" *ngFor="let prd of facturedatail.produitItems ">
+                <td> {{prd.id}} </td>
+                <td> {{prd.prix}}DH </td>
+                <td> {{prd.quantite}} </td>
+                <td style="color: #913A3A;"> {{prd.quantite * prd.prix}} dh</td>
+              </tr>
+            <tr class="text-center">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td style="color: #913A3A;text-shadow: cadetblue"><i><b>Total : {{facturedatail.total}} dh</b></i></td>
+            </tr>
+            </tbody>
+          </table>
+          <div class="card-footer" style="background-color: #C3ACAC"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
