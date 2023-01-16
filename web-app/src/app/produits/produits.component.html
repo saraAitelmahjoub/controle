@@ -1,0 +1,30 @@
+<div class="container"  style="text-align: center">
+  <h1 style="margin-top:20px;color: #693737;margin-bottom: 50px;">Liste des Produits:</h1>
+  <table class="table" *ngIf="produits">
+    <thead style="background-color: #CEB3B3">
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prix(DH)</th>
+        <th>Quantité</th>
+      </tr>
+    </thead>
+    <tbody style="background-color: #FBF8F8">
+      <tr *ngFor="let p of produits._embedded.produits">
+        <td>
+          {{p.id}}
+        </td>
+        <td>
+          {{p.nameproduit}}
+        </td>
+        <td>
+          {{p.prix}} <i>DH</i>
+        </td>
+        <td>
+          {{p.quantite}}
+        </td>
+      </tr>
+    </tbody>
+    <tfoot style="background-color: #693737"><tr><th></th><th></th><th></th><th></th></tr></tfoot>
+  </table>
+</div>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+>
+<head>
+  <meta charset="utf-8">
+  <title>WebApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm " style="background-color: #520202;box-shadow: black;">
+  <div class="container-fluid">
+    <ul class="navbar-nav" >
+      <li class="nav-item" >
+        <a class="nav-link " style="color:aliceblue"  href="#">SaraEcom</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:aliceblue"  routerLink="/produits">Produits</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:aliceblue"  routerLink="/clients">Clients</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" style="color:aliceblue"  data-bs-toggle="dropdown">Dropdown</a>
+        <ul class="dropdown-menu">
+          <li> <a class="dropdown-item" (click)="onLogout()">LogOut</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="container-fluid" style="margin-left:100%">
+
+          <span sec:authentication="name"></span>
+             <img src="assets/img/img_user.png" alt="image user" style="width:40px;" class="rounded-pill">
+        </div>
+
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet>
+
+</router-outlet>
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+<div class="container"  style="text-align: center">
+  <h1 style="margin-top:20px;color: #693737;margin-bottom: 50px;">Liste des Clients:</h1>
+  <table class="table" *ngIf="clients" >
+    <thead style="background-color: #CEB3B3">
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody style="background-color: #FBF8F8">
+    <tr *ngFor="let c of clients._embedded.clients">
+      <td >
+        {{c.id}}
+      </td>
+      <td>
+        {{c.name}}
+      </td>
+      <td>
+        {{c.email}}
+      </td>
+      <td>
+        <button class="btn " style="background-color: #693737;color:antiquewhite" (click)="getFacture(c)">Factures</button>
+      </td>
+    </tr>
+    </tbody>
+    <tfoot style="background-color: #693737"><tr><th></th><th></th><th></th><th></th></tr></tfoot>
+  </table>
+</div>
