@@ -25,9 +25,11 @@
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" style="color:aliceblue"  data-bs-toggle="dropdown">Dropdown</a>
+        <a class="nav-link dropdown-toggle" href="#" role="button" style="color:aliceblue"  data-bs-toggle="dropdown">
+          <span sec:authentication="name"></span>
+        </a>
         <ul class="dropdown-menu">
-          <li> <a class="dropdown-item" (click)="onLogout()">LogOut</a></li>
+          <li> <a class="dropdown-item" th:href="@{/onLogout()}">LogOut</a></li>
         </ul>
       </li>
       <li>

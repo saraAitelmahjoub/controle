@@ -46,16 +46,26 @@ public class PageEventService {
         };
     }
     @Bean
-    public Function<KStream<String,PageEvent>, KStream<String,Long>> kStreamFunction(){
-        return (input)->{
-            return input
+    public Function<KStream<String,PageEvent>,KStream<String,Long>> kStreamFunction(){
+        return (input)-> {
+            KStream<String,Long> result=input
                     .filter((k,v)->v.getDuration()>100)
                     .map((k,v)->new KeyValue<>(v.getName(),0L))
-                    .groupBy((k,v)->k, Grouped.with(Serdes.String(), Serdes.Long()))
-                    .windowedBy(TimeWindows.of(Duration.ofSeconds(1)))
+                    .groupBy((k,v)->k,Grouped.with(Serdes.String(),Serdes.Long()))
+                    .windowedBy(TimeWindows.ofSizeWithNoGrace(Duration.ofSeconds(5)))
                     .count(Materialized.as("page-count"))
                     .toStream()
-                    .map((k,v)->new KeyValue<>("=>"+k.window().startTime()+k.window().endTime()+k.key(),v));
+                    .map(
+                            (k,v)->{
+                                KeyValue <String,Long> kv=new KeyValue<>(
+                                        k.window().startTime()+" => "+k.window().endTime()+" "+k.key(),
+                                        v
+                                );
+                                System.out.println(kv.key+" "+kv.value);
+                                return kv;
+                            }
+                    );
+            return  result;
         };
     }
 }

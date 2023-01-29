@@ -6,13 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 
+@CrossOrigin
 @FeignClient(name="CLIENT-SERVICE")
-@CrossOrigin(origins = "http://localhost:4200")
 public interface clientRestClient {
 
     @GetMapping(path = "/clients/{id}")
     Client getClientById(@PathVariable(name = "id") Long id);
-
-    @GetMapping(path = "/clients")
+   @GetMapping(path = "/clients")
     Client getAllClient();
 }

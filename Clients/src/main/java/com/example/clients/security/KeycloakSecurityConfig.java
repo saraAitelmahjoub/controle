@@ -33,9 +33,8 @@ public  class KeycloakSecurityConfig extends KeycloakWebSecurityConfigurerAdapte
     public void configure(HttpSecurity http) throws Exception {
         //pour les droits d'acc
         super.configure(http);
-        http.authorizeRequests().antMatchers("/clients").authenticated();
-        http.headers().frameOptions().disable();
-        http.csrf().disable();
+        http.authorizeRequests().antMatchers("/clients/**").authenticated();
+
     }
 
 }

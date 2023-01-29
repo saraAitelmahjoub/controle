@@ -1,6 +1,9 @@
-package com.sid.demospringcloudstreamskafka.entities;
+package org.sid.springcloudstreamskafka.entities;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.Date;
 
@@ -11,6 +14,6 @@ import java.util.Date;
 public class PageEvent {
     private String name;
     private String user;
-    private Date datevisite;
+    private Date date;
     private long duration;
 }

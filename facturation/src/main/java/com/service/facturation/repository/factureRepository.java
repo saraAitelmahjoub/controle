@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 
 @RepositoryRestResource
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin
 public interface factureRepository extends JpaRepository<facture,Long> {
 
     @RestResource(path = "/byClientId")

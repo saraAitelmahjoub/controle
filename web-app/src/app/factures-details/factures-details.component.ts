@@ -15,7 +15,7 @@ export class FacturesDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get("/FACTURE-SERVICE/allfacture/"+this.factureId).subscribe({
+    this.http.get("http://localhost:8888/FACTURE-SERVICE/allfacture/"+this.factureId).subscribe({
       next:(data)=>{
         this.facturedatail=data;
       },
